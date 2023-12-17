@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util-3.0.xsd
+           ">
+
+	<!-- StandAlone List -->
+	<util:list list-class="java.util.Vector" id="friendsList">
+		<value>10</value>
+		<value>20</value>
+		<value>30</value>
+	</util:list>
+
+	<!-- StandAlone Map -->
+	<util:map map-class="java.util.TreeMap" id="skills">
+		<entry key="HTML" value="15 Days" />
+		<entry key="CSS" value="1 Month" />
+	</util:map>
+
+	<!-- StandAlone Properties -->
+	<util:properties id="db">
+		<prop key="Driver">com.mysql.jdbc.Driver</prop>
+		<prop key="username">root</prop>
+		<prop key="password">prince</prop>
+		<prop key="database-url">mysql:jdbc://localhost:3306/database</prop>
+	</util:properties>
+
+	<bean class="org.learn.standalone.collections.Student"
+		name="student">
+		<property name="friends">
+			<ref bean="friendsList" />
+		</property>
+		<property name="skiils">
+			<ref bean="skills" />
+		</property>
+		<property name="dbconfig">
+			<ref bean="db" />
+		</property>
+	</bean>
+
+</beans>

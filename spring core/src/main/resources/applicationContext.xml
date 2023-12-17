@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+    <bean class="com.learn.xmlconfig.Product" id="product">
+        <constructor-arg name="productId" value="A-123"/>
+        <constructor-arg name="productName" value="Laptop"/>
+        <constructor-arg name="productDescription" value="this is asus laptop"/>
+    </bean>
+
+</beans>

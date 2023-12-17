@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="emp1" id="emp1" class="org.learn.collections.Emp">
+		<property name="name">
+			<value>Rohan</value>
+		</property>
+		<property name="address">
+			<list>
+				<value>Kolkata</value>
+				<value>Delhi</value>
+			</list>
+		</property>
+		<property name="phone">
+			<set>
+				<value>+91 773792398</value>
+				<value>+91 773792398</value>
+				<value>+91 773792398</value>
+			</set>
+		</property>
+		<property name="courses">
+			<map>
+				<entry key="java" value="1" />
+				<entry key="c" value="3" />
+			</map>
+		</property>
+		<property name="student">
+			<props>
+				<prop key="studentId">1</prop>
+				<prop key="studentName">Rohan</prop>
+				<prop key="studentAddress">Kolkata</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

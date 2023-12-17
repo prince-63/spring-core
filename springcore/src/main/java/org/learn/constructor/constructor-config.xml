@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean class="org.learn.constructor.Certificate" name="certificate">
+		<constructor-arg value="1" type="int"/>
+		<constructor-arg>
+			<value>Python Programming</value>
+		</constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>IDE</value>
+				<value>programming language</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean class="org.learn.constructor.Person" name="person">
+		<constructor-arg value="Prince" type="String"/>
+		<constructor-arg>
+			<ref bean="certificate" />
+		</constructor-arg>
+	</bean> -->
+	
+	<bean class="org.learn.constructor.Certificate" name="certificate" c:id="1" c:name="python programming" c:skills="IDE, programming langauge"/>
+	<bean class="org.learn.constructor.Person" name="person" c:name="Prince" c:certificate-ref="certificate" />
+</beans>
